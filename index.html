@@ -10,7 +10,53 @@
 
     <title>Code Quiz</title>
 </head>
-<body class="container-fluid">
-    
+<body class="container">
+    <!-- Scorebar -->
+    <div class="scorebar row">
+        <div class="col-6">View High Scores</div>
+        <div class="timer col-6 text-right">
+            Time: <span id="countdown">0</span>
+        </div>
+    </div>
+
+    <main class="container bg-white ml-0">
+        <!-- main content with cards of quiz questions -->
+        <section id="instructions" class="flex-row px-4">
+            <h2 class="col-12 text-center">Code Quiz Challenge</h2>
+            <hr>
+            <p>
+                Try to answer the following code-related questions within the 90 second time
+                limit. You have 90 seconds to answer questions. Careful though, for each incorrect answer you lose 10 seconds!
+            </p>
+            <button class="btn btn-primary" id="start">Start Quiz</button>
+        </section>
+        <section id="questions" class="row hide">
+            <div class="col-3">&nbsp;</div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" id="questions-title"></h5>
+                        <div class="card-text btn-group-vertical" role="group" aria-label="Vertical button group" id="answer-choices"></div>
+                        <div id="feedback" class="card-text hide"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">&nbsp;</div>
+        </section>
+        <section id="quiz-done" class="row hide">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Finished!</h5>
+                        <p class="card-text">Your final score is <span id="final-score"></span>.</p>
+                        <p class="card-text">Enter initials: <input type="text" id="initials"/>
+                        <button class="btn-primary" id="submit">Submit</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="./assets/js/questions.js"></script>
+        <script src="./assets/js/quizlogic.js"></script>
 </body>
 </html>
