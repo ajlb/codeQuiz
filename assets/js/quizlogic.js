@@ -10,11 +10,11 @@ const feedbackEl = document.querySelector("#feedback");
 
 // set initial values
 var currentQuestionIndex = 0;
-var finalCountdown = questions.length *10;
+var finalCountdown = questions.length * 10;
 var timer;
 
 // start the quiz
-function startQuiz(){
+function startQuiz() {
     // hide the instructions section
     let instructionsEl = document.querySelector('#instructions')
     instructionsEl.setAttribute("class", "hide");
@@ -25,14 +25,14 @@ function startQuiz(){
     // start the countdown
     // timer = setInterval(clockTick, 1000);
     timer = setInterval(() => {
-          // update time
-            finalCountdown--;
-            timerEl.textContent = finalCountdown;
+        // update time
+        finalCountdown--;
+        timerEl.textContent = finalCountdown;
 
-            // check if user ran out of time
-            if (finalCountdown <= 0) {
-                quizEnd();
-            }
+        // check if user ran out of time
+        if (finalCountdown <= 0) {
+            quizEnd();
+        }
     }, 1000);
 
     // display the countdown
@@ -59,7 +59,7 @@ function getQuestion() {
         // create new button for each option
         let optionButton = document.createElement("button");
         optionButton.setAttribute("type", "button");
-        optionButton.setAttribute("class", "btn-primary");
+        optionButton.setAttribute("class", "btn-primary btn-lg btn-block");
         optionButton.setAttribute("value", option);
         // add some formatting
         optionButton.textContent = option;
@@ -74,10 +74,10 @@ function getQuestion() {
 // check answers
 function answerClick() {
     // check if answer is wrong
-    if (this.value !== questions[currentQuestionIndex].answer){
+    if (this.value !== questions[currentQuestionIndex].answer) {
         // deduct time and display updated value
         finalCountdown -= 10;
-        if (finalCountdown <0){
+        if (finalCountdown < 0) {
             finalCountdown = 0;
         }
         timerEl.textContent = finalCountdown;
@@ -89,7 +89,7 @@ function answerClick() {
     }
     // show right/wrong feedback on page for half a second
     feedbackEl.setAttribute("class", "feedback");
-    
+
     setTimeout(function() {
         feedbackEl.setAttribute("class", "feedback hide");
     }, 1000);
@@ -129,23 +129,24 @@ function highscore() {
     let initials = playerInitials.value.trim();
 
     // only store populated initials. if blank do nothing
-    if (initials !== ""){
+    if (initials !== "") {
         // write the initials and score to local storage
-        let highscores = JSON.parse(window.localStorage.getItem("highscores")) ||[];
+        let highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
         // record newHighscore for player
         let newHighscore = {
-            score: finalCountdown, initials: initials
+            score: finalCountdown,
+            initials: initials
         };
         // add value to local storage
         highscores.push(newHighscore);
         window.localStorage.setItem("highscores", JSON.stringify(highscores));
         // send player to highscore page
-        window.location.href="highscores.html"
+        window.location.href = "highscores.html"
     }
 }
 
-function checkForEnterKey(event){
-    if (event.key === "Enter"){
+function checkForEnterKey(event) {
+    if (event.key === "Enter") {
         highscore();
     };
 
