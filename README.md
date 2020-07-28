@@ -1,5 +1,5 @@
 # Code Quiz #
-<!-- ![Screenshot of index.html](./assets/Password_Generator.png) -->
+<!-- ![Screenshot of index.html](./assets/images/CodeQuiz.png) -->
 ### https://n-lambert.github.io/codeQuiz/ ###
 
 ## Table Of Contents ##
@@ -11,7 +11,7 @@
 
 ## Introduction ##
 
-This is a timed quiz for JavaScript code best practices. You have 90 seconds to answer questions. Careful though, for each incorrect answer you lose 10 seconds. 
+This is a simple timed quiz for JavaScript code. You have an alloted time in seconds to answer questions. Each incorrect answer deducts 10 seconds from the timer. Scores are recorded to localStorage and displayed on a scoreboard. 
 
 ## Usage ##
 
