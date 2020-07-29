@@ -1,81 +1,84 @@
-                        /* Formatting for all page body */
-                    
-                    body {
-                        background-image: url(../images/connect.png);
-                        color: gray;
-                    }
-                    /* formatting for scorebar */
-                    
-                    .scorebar {
-                        font-size: 3vh;
-                        font-family: 'Georgia', Times, 'Times New Roman', serif;
-                        font-weight: bold;
-                        color: white;
-                        background-color: #69b;
-                        margin: 0;
-                        padding-top: .7em;
-                        padding-bottom: .5em;
-                    }
-                    
-                    .scorebar a {
-                        color: white;
-                    }
-                    
-                    .timer {
-                        color: white;
-                    }
-                    
-                    main {
-                        margin: auto;
-                        margin-bottom: 100px;
-                    }
-                    
-                    main h2 {
-                        color: #69b;
-                        font-family: Georgia, 'Times New Roman', Times, serif;
-                        font-weight: bold;
-                        padding-top: .6em;
-                    }
-                    
-                    main hr {
-                        width: 100%;
-                        border: #cccccc solid 1px;
-                    }
-                    
-                    .btn-primary {
-                        background-color: #69b;
-                        border-radius: 5px;
-                        color: white;
-                        border: 0;
-                        transition: background-color 0.1s;
-                    }
-                    
-                    .hide {
-                        display: none;
-                    }
-                    
-                    .card {
-                        border: none;
-                        width: 18rem;
-                    }
-                    
-                    .card-body {
-                        padding: 10px;
-                        margin: 0px;
-                    }
-                    
-                    @media screen and (max-width: 767px) {
-                        .scorebar {
-                            padding: 0;
-                            font-size: 1.6rem;
-                        }
-                        main h1 {
-                            text-align: center;
-                            font-size: 2vw;
-                        }
-                    }
-                    
-                    @media screen and (min-width: 1037px) {
-                        .scorebar {
-                            font-size: 24px;
-                        }
+/* Formatting for all page body */
+
+body {
+    background-image: url(../images/connect.png);
+    color: gray;
+}
+
+
+/* formatting for scorebar */
+
+.scorebar {
+    font-size: 3vh;
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: white;
+    background-color: #69b;
+    margin: 0;
+    padding-top: .7em;
+    padding-bottom: .5em;
+}
+
+.scorebar a {
+    color: white;
+}
+
+.timer {
+    color: white;
+}
+
+main {
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+main h2 {
+    color: #69b;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding-top: .6em;
+}
+
+main hr {
+    width: 100%;
+    border: #cccccc solid 1px;
+}
+
+.btn-primary {
+    background-color: #69b;
+    border-radius: 5px;
+    color: white;
+    border: 0;
+    transition: background-color 0.1s;
+}
+
+.hide {
+    display: none;
+}
+
+.card {
+    border: none;
+    width: 18rem;
+}
+
+.card-body {
+    padding: 10px;
+    margin: 0px;
+}
+
+@media screen and (max-width: 767px) {
+    .scorebar {
+        padding: 0;
+        font-size: 1.6rem;
+    }
+    main h1 {
+        text-align: center;
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 1037px) {
+    .scorebar {
+        font-size: 24px;
+    }
+}
