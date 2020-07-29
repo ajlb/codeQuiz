@@ -1,5 +1,5 @@
 # Code Quiz #
-<!-- ![Screenshot of index.html](./assets/images/CodeQuiz.png) -->
+![Screenshot of index.html](./assets/images/Code_Quiz.png)
 ### https://n-lambert.github.io/codeQuiz/ ###
 
 ## Table Of Contents ##
